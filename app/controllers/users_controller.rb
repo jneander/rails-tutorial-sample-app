@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       # Handle a successful save.
     else
-      render 'new'
+      render "new"
     end
   end
 
