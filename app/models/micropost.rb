@@ -15,4 +15,8 @@ class Micropost < ApplicationRecord
             }
 
   default_scope -> { order(created_at: :desc) }
+
+  def display_image
+    image.variant(resize_to_limit: [500, 500])
+  end
 end
